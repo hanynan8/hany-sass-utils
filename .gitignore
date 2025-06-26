@@ -1,0 +1,23 @@
+# Node modules (heavy, unnecessary to track)
+node_modules/
+
+# Build output (لو بتخرج CSS أو مجلد dist)
+dist/
+build/
+
+# Cache files
+.cache/
+.pnpm-debug.log
+yarn.lock
+package-lock.json
+
+# CSS output from SCSS (لو بيطلع في نفس المكان)
+*.css
+*.css.map
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/

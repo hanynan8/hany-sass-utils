@@ -1,0 +1,14 @@
+// index.scss
+
+// variables & functions at the top
+
+@import 'variables';
+@import 'functions';
+@import 'utilites';
+@import "breakpoints";
+@import 'colorsPrograming';
+@import 'base';
+@import 'grid';
+@import 'components/card'; // بدون as * أفضل للمكونات
+@import 'components/button';
+@import 'components/navbar';

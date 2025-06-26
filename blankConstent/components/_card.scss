@@ -1,0 +1,36 @@
+// components/_card.scss
+// @use 'sass:map';
+// @use '../base' as *;
+// @use '../variables' as *;
+
+.card {
+  display: block;
+  padding: $base-padding * 0;
+  border: $base-border-thickness solid #ddd;
+  box-shadow: $base-box-shadow;
+  border-radius: calc($base-border-radius / 4);
+  ;
+  .card-title {
+    font-size: $base-font-size-lg;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+  
+  .card-body {
+    font-size: $base-font-size-sm;
+    margin: 8px;
+    
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// للتجريب فقط اللي تحت دول يامعلم مش تبع ال card
+.base-padding{
+  padding: calc($base-padding / 2.5);
+};

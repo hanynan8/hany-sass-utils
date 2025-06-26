@@ -1,0 +1,97 @@
+// @use "breakpoints" as *;
+
+// graaaaaads
+
+$grid-columns: 12;
+
+$grid-gaps: (
+  "0": 0,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+  "4": 40px,
+  "5": 50px,
+  );
+  
+
+  @each $key, $val in $grid-gaps {
+    .gap-#{$key} > * {
+      padding: #{$val};
+    }
+    .gap-#{$key}{
+      margin: -#{$val};
+    }
+  }
+
+
+// justfaaaaaaaaay & lists
+
+$justify-values: flex-start, flex-end, center, space-between, space-around;
+
+
+@each $val in $justify-values {
+  .j-#{$val}{
+    justify-content: #{$val};
+  }
+}
+
+
+
+
+
+// base layout classes
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; // padding & border is complated with the width
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+
+// the layout classes
+
+// @include xs {
+  //   @for $i from 1 through $grid-columns {
+    //     .col-#{$i}-xs {
+      //       box-sizing: border-box;
+      //       flex-wrap: 0;
+      //       width: calc(#{$i} * 100% / $grid-columns);
+  //     }
+  //   }
+  // }
+
+
+
+
+        
+@mixin innergridcss($i) {
+  box-sizing: border-box;
+  flex-grow: 0;  // صححنا flex-wrap إلى flex-grow
+  width: calc(#{$i} * 100% / $grid-columns);
+}
+
+
+  @each $key, $val in $breakpoints {
+    @media (min-width: $val) {
+      .col-#{$key} {
+        @include innergridcss(12);
+      }
+
+      @for $i from 1 through $grid-columns {
+        .col-#{$key}-#{$i} {
+          @include innergridcss($i);
+      }
+
+        .col-#{$i} {
+          @include innergridcss($i);
+        }
+      }
+    }
+  } 
