@@ -13,8 +13,8 @@ This library provides pre-built utility classes to speed up layout creation, red
 - ✅ Grid System (e.g. `.row`, `.col-6`, `.gap-3`)  
 - ✅ Pre-styled Buttons (e.g. `.btn`, `.btn-primary`, `.btn-outline`)  
 - ✅ Color Classes (e.g. `.bg-primary`, `.text-danger`)  
-- ✅ Responsive classes for mobile, tablet, and desktop
-- ✅ Easy customization using SCSS variables and mixins
+- ✅ Responsive classes for mobile, tablet, and desktop  
+- ✅ Easy customization using SCSS variables and mixins  
 - ✅ Clean, modular structure
 
 ---
@@ -27,13 +27,27 @@ This library provides pre-built utility classes to speed up layout creation, red
    git clone https://github.com/hanynan8/hany-sass-utils.git
    ```
 
-2. **Import the main SCSS file:**
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run Gulp to compile SCSS:**
+
+   ```bash
+   npx gulp
+   ```
+
+   > This will compile SCSS files into CSS and optionally purge unused styles if configured.
+
+4. **Import the main SCSS file in your project:**
 
    ```scss
    @import "path-to/hany-sass-utils/main";
    ```
 
-3. **Use the utility classes directly in your HTML:**
+5. **Use the utility classes directly in your HTML:**
 
    ```html
    <div class="row gap-3">
@@ -44,13 +58,14 @@ This library provides pre-built utility classes to speed up layout creation, red
    <button class="btn btn-primary mt-4">Click Me</button>
    ```
 
-4. **Customize variables** in `_variables.scss` before compiling to adjust spacing, colors, breakpoints, etc.
+6. **Customize variables** in `_variables.scss` before compiling to adjust spacing, colors, breakpoints, etc.
 
 ---
 
 ## 🛠 Built With
 
 - **SASS / SCSS** – compiled with `dart-sass`
+- **Gulp** – task runner to compile SCSS and clean up unused CSS
 - Modular architecture for scalability
 - No external dependencies
 
