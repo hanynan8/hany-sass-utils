@@ -11,10 +11,6 @@ build/
 yarn.lock
 package-lock.json
 
-# CSS output from SCSS (لو بيطلع في نفس المكان)
-*.css
-*.css.map
-
 # System files
 .DS_Store
 Thumbs.db
